@@ -91,16 +91,15 @@ $(function () {
          * afterwards.
          */
         beforeEach(function (done) {
-            loadFeed(0, done);
+            loadFeed(0, function() { done(); });
         });
 
         /**
          * Tests if the feed container elem has at least 1 element with class 'entry' after
          * the first feed is loaded.
          */
-        it('should load', function (done) {
+        it('should load', function () {
             expect($feedContainer.has('.entry').length).toBeGreaterThan(0);
-            done();
         });
 
     });
@@ -125,17 +124,20 @@ $(function () {
         /**
          * After each test, perform tear down by resetting the content to show the first feed.
          */
-        afterEach(function () {
+        afterAll(function () {
             loadFeed(0);
         });
 
         /**
-         * Test that checks if the feed container's content is different than the previously saved content,
-         * after the next feed is loaded.
+         * Test that checks if the feed container's content is defined and non-empty string and is different than the
+         * previously saved content, after the next feed is loaded.
          */
-        it('should display new content', function (done) {
-            expect($feedContainer.html()).not.toEqual(feedContent);
-            done();
+        it('should display new content', function () {
+            var newContent = $feedContainer.html();
+            expect(newContent).toBeDefined();
+            expect(typeof(newContent)).toBe('string');
+            expect(newContent.length).toBeGreaterThan(0);
+            expect(newContent).not.toEqual(feedContent);
         });
 
     });
