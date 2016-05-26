@@ -1,0 +1,17 @@
+{
+  "name": "p6-feed-reader-testing",
+  "version": "1.0.0",
+  "description": "Udacity's project 6. Testing a feed reader app.",
+  "main": "app.js",
+  "scripts": {
+    "deploy": "http-server -a localhost -p 8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lisatd/frontend-nanodegree-feedreader.git"
+  },
+  "homepage": "http://lisatd.github.io/frontend-nanodegree-feedreader",
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  }
+}
