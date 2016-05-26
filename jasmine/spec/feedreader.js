@@ -26,7 +26,6 @@ $(function () {
             expect(allFeeds.length).not.toBe(0);
         });
 
-
         /**
          * Tests that the urls for every item in allFeeds is defined and not empty.
          */
@@ -50,7 +49,6 @@ $(function () {
             });
         });
     });
-
 
     /**
      * Suite that encompasses tests related to menu functionality.
