@@ -1,7 +1,7 @@
 # P6 Feed Reader Testing
 
 ## How to View
-1. Navigate to [here](http://lisatd.github.io/p6-feedreader-testing).
+Navigate to [here](http://lisatd.github.io/p6-feedreader-testing).
 
 ## How to Run Locally
 Requires node.js / npm.
