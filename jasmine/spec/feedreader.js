@@ -116,8 +116,10 @@ $(function () {
          * passing the done callback.
          */
         beforeEach(function (done) {
-            feedContent = $feedContainer.html();
-            loadFeed(1, done);
+            loadFeed(0, function() {
+                feedContent = $feedContainer.html();
+                loadFeed(1, done);
+            });
         });
 
         /**
